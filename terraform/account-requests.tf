@@ -72,3 +72,77 @@ module "account_request_02" {
 
   account_customizations_name = "PRODUCTION"
 }
+
+module "account_request_03" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "naramanilkumar8@gmail.com"
+    AccountName               = "AFT-ACCOUNT-03"
+    ManagedOrganizationalUnit = "Sandbox" 
+    SSOUserEmail              = "naramanilkumar8@gmail.com"
+    SSOUserFirstName          = "Naramani"
+    # Replace with your actual last name
+    SSOUserLastName           = "Kumar"
+  }
+
+  account_tags = {
+    "ABC:Owner"       = "dnaramanilkumar8@gmail.com"
+    "ABC:Division"    = "ENT"
+    "ABC:Environment" = "Dev"
+    "ABC:CostCenter"  = "123456"
+    "ABC:Vended"      = "true"
+    "ABC:DivCode"     = "102"
+    "ABC:BUCode"      = "ABC003"
+    "ABC:Project"     = "123456"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "AWS Control Tower Lab"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform (AFT)"
+  }
+
+  custom_fields = {
+    custom1 = "a"
+    custom2 = "b"
+  }
+
+  account_customizations_name = "SANDBOX"
+}
+
+module "account_request_04" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "shinuanudeep@gmail.com"
+    AccountName               = "AFT-ACCOUNT-04"
+    ManagedOrganizationalUnit = "Sandbox" 
+    SSOUserEmail              = "shinuanudeep@gmail.com"
+    SSOUserFirstName          = "Shinuanu"
+    # Replace with your actual last name
+    SSOUserLastName           = "Deep"
+  }
+
+  account_tags = {
+    "ABC:Owner"       = "shinuanudeep@gmail.com"
+    "ABC:Division"    = "ENT"
+    "ABC:Environment" = "Dev"
+    "ABC:CostCenter"  = "123456"
+    "ABC:Vended"      = "true"
+    "ABC:DivCode"     = "102"
+    "ABC:BUCode"      = "ABC003"
+    "ABC:Project"     = "123456"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "AWS Control Tower Lab"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform (AFT)"
+  }
+
+  custom_fields = {
+    custom1 = "a"
+    custom2 = "b"
+  }
+
+  account_customizations_name = "SANDBOX"
+}
